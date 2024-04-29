@@ -1,5 +1,9 @@
-Abra a pasta projeto e dentro dela abra o Projeto.sln (utilizei Visual Studio 2022)
-É necessário instalar 3 pacotes para esse projeto:
+# Teste Full Stack (.Net Core/Angular) 
+
+
+## --Back End--
+
+### É necessário instalar 3 pacotes para esse projeto:
 Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer e Microsoft.EntityFrameworkCore.Tools
 
 A pasta Model serve para guardar 3 classes para serem utilizadas:
@@ -25,8 +29,9 @@ Dentro da pasta Controllers está o controler de cada classe, cada uma com seu r
 
 Rode o código e veja se aparece as classes Cliente,Pedidos e Produtos e dentro delas as funções get(mostra todos os valores contidos dentro da classe), post, get, put e delete
 
---Parte do front--
-Necessário baixar o AngularCLI
+## --Parte do front--
+
+### É necessário baixar o AngularCLI
 
 Abra a pasta Pagina-Projeto (utilizei Visual Studio Code)
 
@@ -38,6 +43,5 @@ Para iniciar o programa clique em Terminal> New Terminal e depois digita:
 ng serve -o
 
 
-
-Projeto imcompleto
+### Conteudo a aprimorar
 Necessário ainda corrigir erros, melhorar visual e arrumar a conexão do front com o back e o banco de dados
