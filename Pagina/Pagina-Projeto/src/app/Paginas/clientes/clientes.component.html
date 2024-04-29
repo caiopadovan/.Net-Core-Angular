@@ -1,0 +1,99 @@
+<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/clientes">Clientes</a>
+
+  
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+
+      <div class="navbar-collapse collapse show" id="navbarsExample01">
+        <ul class="navbar-nav me-auto mb-2">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/home">Home</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/produtos">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/clientes">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/pedidos">Pedidos</a>
+          </li>
+        </ul>
+        <form>
+            <a class ="link-item" href="/login">Entrar/</a>
+            <a class="link-item" href="/cadastro">Cadastrar</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mostrando a tabela com seus respectivos valores para cada cliente -->
+
+  <div class="table-container">
+  <table class="table">
+    <thead class="table-head">
+      <tr>
+        <th >CPF</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+        <th>Telefone</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    
+    <tbody class="table-body">
+      <tr *ngFor="let cliente of clientes">
+        <td>{{cliente.CPF}}</td>
+        <td>{{cliente.Nome}}</td>
+        <td>{{cliente.Sobrenome}}</td>
+        <td>{{cliente.Cidade}}</td>
+        <td>{{cliente.Estado}}</td>
+        <td>{{cliente.Telefone}}</td>
+      </tr>
+
+
+      <!-- Exemplo de como é para ficar-->
+
+      <tr>
+        <td >444.444.444.21</td>
+        <td>Joao</td>
+        <td>Pedro</td>
+        <td>Ribeirão Preto</td>
+        <td>São Paulo</td>
+        <td>16999999999</td>
+        <td><a (click) ="updateCliente(cliente)"><button class ="editbtn">Editar</button></a></td>
+        <td><a (click) ="deletarCliente(cliente.ClienteID)"><button class="deletebtn">Excluir</button></a></td>
+      </tr>
+      <tr>
+        <td >555.555.555.22</td>
+        <td>Gustavo</td>
+        <td>Augusto</td>
+        <td>Rio de Janeiro</td>
+        <td>Rio de Janeiro</td>
+        <td>16888888888</td>
+        <td><a (click) ="updateCliente(cliente)"><button class ="editbtn">Editar</button></a></td>
+        <td><a (click) ="deletarCliente(cliente.ClienteID)"><button class="deletebtn">Excluir</button></a></td>
+      </tr>
+      <tr>
+        <td >555,555,555,84</td>
+        <td>Thiago</td>
+        <td>Silva</td>
+        <td>São Paulo</td>
+        <td>São Paulo</td>
+        <td>167777777777</td>
+        <td><a (click) ="updateCliente(cliente)"><button class ="editbtn">Editar</button></a></td>
+        <td><a (click) ="deletarCliente(cliente.ClienteID)"><button class="deletebtn">Excluir</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

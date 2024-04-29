@@ -1,0 +1,31 @@
+.link-item{
+    color: white;
+    text-align: right;
+}
+
+.table-container{
+    overflow-x: auto;
+  }  
+
+ .table-body{
+    border: 1px solid;
+  }
+
+  th, td{
+    padding: 10px;
+    text-align: left;
+  }
+
+  td{
+    font-weight: normal;
+  }
+
+  .editbtn{
+    background-color: rgb(90, 81, 81);
+    color:white;
+  }
+
+  .deletebtn{
+    background-color: rgb(179, 39, 39);
+    color: white;
+  }

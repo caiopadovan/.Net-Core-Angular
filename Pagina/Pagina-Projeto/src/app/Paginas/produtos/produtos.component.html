@@ -1,0 +1,84 @@
+
+<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/produtos">Produtos</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01"
+      aria-controls="navbarsExample01" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse show" id="navbarsExample01">
+      <ul class="navbar-nav me-auto mb-2">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/produtos">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/clientes">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/pedidos">Pedidos</a>
+        </li>
+      </ul>
+      <form>
+        <a class="link-item" href="/login">Entrar/</a>
+        <a class="link-item" href="/cadastro">Cadastrar</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div class="table-container">
+  <button class="addbtn">Adicionar Produto</button>
+  <table class="table">
+    <thead class="table-head">
+      <tr>
+        <!-- <th>Imagem</th> -->
+        <th>Imagem</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-body">
+
+      <!--
+        <tr *ngFor="let produto of produtos">
+          <td>{{produto.Imagem}}</td>
+          <td>{{produto.Nome}}</td>
+          <td>{{produto.Descricao}}</td>
+          <td>{{produto.Preco}}</td>
+          <td>{{produto.Quantidade}}</td>
+        </tr>
+  -->
+      <!-- Exemplo de como é para ficar-->
+
+      <tr>
+        <td>#</td>
+        <td>Chocolate</td>
+        <td>Marca KitKat, alto teor açucar</td>
+        <td>12,40</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>#</td>
+        <td>Arroz</td>
+        <td>50Kg</td>
+        <td>106,50</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>#</td>
+        <td>Picanha</td>
+        <td>Savegnago 800g</td>
+        <td>43,20</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

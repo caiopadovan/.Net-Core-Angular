@@ -1,0 +1,61 @@
+<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/login">Login</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse show" id="navbarsExample01">
+        <ul class="navbar-nav me-auto mb-2">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/home">Home</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/produtos">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/clientes">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/pedidos">Pedidos</a>
+          </li>
+        </ul>
+        <form>
+            <a class="link-item" href="/cadastro">Cadastrar</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+    <h1>Entre na sua conta</h1>
+    <div class="login-container">
+        <div class="form-login">
+            <form>
+
+                <!-- Página de login que usa como dados de entrada o CPF e a Senha -->
+
+                <div class="form-group">
+                    <p>Digite seu CPF e sua Senha para <strong>entrar</strong> na sua conta!</p>
+                    <div class="form-group">
+                        <label for="">CPF</label>
+                        <input type="text"  name="cpf">                        
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Senha</label>
+                    <input type="password" name="senha">                    
+                  </div>
+                  <div class="form-group">
+                    <label for="">ConfirmarSenha</label>
+                    <input type="password" name="confirmarsenha">                    
+                  </div>
+                <div class="form-group">
+                    <p>Não tem conta? <a href="/cadastro" target="_blank">Clique aqui para criar!</a></p>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary w-50" type="submit" (click) = "onSubmit()">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>

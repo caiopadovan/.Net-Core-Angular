@@ -1,0 +1,125 @@
+<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/cadastro">Criando conta</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse show" id="navbarsExample01">
+        <ul class="navbar-nav me-auto mb-2">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/home">Home</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/produtos">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/clientes">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/pedidos">Pedidos</a>
+          </li>
+        </ul>
+        <form>
+            <a class ="link-item" href="/login">Entrar</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+    <h1>Faça seu cadastro aqui</h1>
+    <div class="cadastro-container">
+        <div class="form-cadastro">
+
+            <!-- Local do formulário para o cadastro dos usuarios-->
+
+            <form #form ="ngForm" (ngSubmit)="onSubmit()">
+                <p>Preencha com suas informações abaixo para criar sua conta</p>
+                <div class="form-group">
+                    <label for="ValidationCustomNome" class="form-label">Nome</label>
+
+                    <!--O required é usado para não deixar uma informação em branco -->
+
+                    <div class="input-group has-validation">
+
+                      <!-- ngModel está passando a informação das propriedades para armazenar em Cliente através do onSubmit -->
+
+                        <input type="text" [(ngModel)]="cliente.Nome" [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustomNome" aria-describedby="inputGroupPrepend" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label for="ValidationCustomSobrenome">Sobrenome</label>
+                    <div class="input-group has-validation">
+                        <input type="text" [(ngModel)]="cliente.Sobrenome" [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustomSobrenome" aria-describedby="inputGroupPrepend" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                    <div id="cpfForm">
+                    <label for="ValidationCustomCPF">CPF</label>
+                    <div class="input-group has-validation">
+                        <input type="text" [(ngModel)]="cliente.CPF" [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustomCPF" aria-describedby="inputGroupPrepend" required>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ValidationCustomCidade">Cidade</label>
+                    <div class="input-group has-validation">
+                        <input type="text" [(ngModel)]="cliente.Cidade" [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustomCidade" aria-describedby="inputGroupPrepend" required>
+                      </div>
+                </div>
+
+                <!-- Opções de Estados para escolher -->
+
+                <div class="form-group">
+                    <label for="">Estado</label>
+                    <select class="form-select" [(ngModel)]="cliente.Estado" [ngModelOptions]="{standalone: true}" id="estados" aria-label="select validationServerEstadoFeedback" required>
+                        <option value="">Escolha uma opção</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ValidationCustomTelefone">Telefone</label>
+                    <div class="input-group has-validation">
+                        <input type="text" [(ngModel)]="cliente.Telefone" [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustomTelefone" aria-describedby="inputGroupPrepend" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label for="ValidationCustomSenha">Senha</label>
+                    <div class="input-group has-validation">
+                        <input type="password" [(ngModel)]="cliente.Senha" [ngModelOptions]="{standalone: true}" class="form-control" id="validationCustomSenha" aria-describedby="inputGroupPrepend" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Criar</button>
+                </div>
+            </form>
+        </div>
+</div>
