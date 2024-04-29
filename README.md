@@ -44,4 +44,4 @@ ng serve -o
 
 
 ### Conteudo a aprimorar
-Necessário ainda corrigir erros, melhorar visual e arrumar a conexão do front com o back e o banco de dados
+Necessário ainda corrigir erros, melhorar visual, arrumar a conexão do front com o back e o banco de dados, arrumar a barra de navegação
